@@ -58,7 +58,11 @@ body{
   text-decoration:none;
   color: var(--ink);
   font-size:0.95rem;
+
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
 }
+
 
 .site-header nav a:hover{
   text-decoration: underline;
@@ -348,12 +352,17 @@ body{
 }
 
 
+
+
+
 /* Active navigation */
 .site-header nav a.nav-current{
   pointer-events: none;
   cursor: default;
-  opacity: 0.85;
-  text-decoration: underline;
-  text-underline-offset: 6px;
+  opacity: 1;
   font-weight: 700;
+  background: rgba(62,107,79,0.12);
+  border: 1px solid rgba(62,107,79,0.22);
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
 }
