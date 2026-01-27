@@ -46,9 +46,37 @@
 
 <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
 <footer>
+
+
+<section class="footer-newsletter">
+  <div class="footer-newsletter-inner">
+    <div>
+      <h3>Join the Plant Mantra Newsletter</h3>
+      <p>Care tips, new drops, and event updates — delivered occasionally.</p>
+    </div>
+    <form class="newsletter-form" action="#" method="post">
+      <label class="sr-only" for="newsletter-email">Email address</label>
+      <input id="newsletter-email" name="email" type="email" placeholder="Enter your email" required>
+      <button class="btn" type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>
+
 <p>© 2026 Plant Mantra by Mereena · Euless, TX · Serving DFW</p>
 <a href="../legal/privacy-policy.html">Privacy Policy</a> |
 <a href="../legal/cookie-policy.html">Cookie Policy</a>
 </footer>
+<div class="footer-newsletter">
+  <div class="footer-newsletter-inner">
+    <div>
+      <h3>Join the Mantra…</h3>
+      <p>Get DFW event updates, new terrarium drops, rare plant highlights, and 3D accessory releases.</p>
+    </div>
+    <form class="newsletter-form" action="#" method="post" onsubmit="event.preventDefault(); alert('Thanks! Newsletter signup coming soon.');">
+      <input type="email" name="email" placeholder="Email address" required="">
+      <button class="btn" type="submit">Join Newsletter</button>
+    </form>
+  </div>
+</div>
 </body>
 </html>

@@ -1651,3 +1651,205 @@ h1, h2, h3{ font-family: "Playfair Display", Georgia, serif; letter-spacing: 0.2
   }
 }
 
+
+
+/* Image Tooltip */
+.image-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.image-tooltip .tooltip-content {
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(245, 250, 235, 0.95);
+  color: #2f3e2f;
+  padding: 14px 16px;
+  border-radius: 12px;
+  width: 280px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  white-space: pre-line;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 20;
+}
+
+.image-tooltip:hover .tooltip-content {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-4px);
+}
+
+
+
+/* Tooltip header + ecosystems variant */
+.image-tooltip .tooltip-header {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #b08d2a; /* gold */
+}
+
+.image-tooltip .tooltip-body {
+  display: block;
+  white-space: pre-line;
+}
+
+.image-tooltip .tooltip-content-ecosystems {
+  width: 340px;
+  background: rgba(247, 252, 242, 0.95); /* clean light-green/white */
+}
+
+
+
+/* Rare Collection Tooltip */
+.image-tooltip .tooltip-content-rare {
+  width: 360px;
+  background: rgba(245, 250, 245, 0.95);
+  border: 1.5px solid #1f4d3a; /* dark green */
+}
+
+.image-tooltip .tooltip-content-rare .tooltip-header {
+  color: #b08d2a; /* gold */
+}
+
+
+/* Next Event – meta details */
+.event-meta {
+  margin-top: 18px;
+  display: grid;
+  gap: 10px;
+  max-width: 760px;
+}
+
+.event-meta-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(247, 252, 242, 0.85);
+  border: 1px solid rgba(31, 77, 58, 0.18);
+}
+
+.event-meta-icon {
+  font-size: 1.05rem;
+  line-height: 1.2;
+  margin-top: 2px;
+}
+
+.event-meta-text {
+  line-height: 1.45;
+}
+
+.event-location-link {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+.event-location-link:hover {
+  opacity: 0.85;
+}
+
+/* About page: internal TOC + keyword lede */
+.about-content .about-lede {
+  max-width: 900px;
+  margin: 16px 0 18px;
+}
+
+.about-content .about-toc {
+  max-width: 900px;
+  margin: 0 0 34px;
+  padding: 16px 18px;
+  border-radius: 14px;
+  background: rgba(247, 252, 242, 0.85);
+  border: 1px solid rgba(31, 77, 58, 0.18);
+}
+
+.about-content .about-toc-title {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.about-content .about-toc ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.about-content .about-toc a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  color: inherit;
+}
+
+/* Anchor offset so headings don't hide under sticky nav (if present) */
+.about-content h2[id], .about-content h3[id], .about-content h1[id] {
+  scroll-margin-top: 90px;
+}
+
+/* About page layout */
+.page-main{
+  padding: 42px 0 70px;
+}
+
+.about-page{
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.about-page h1{
+  margin-top: 10px;
+  margin-bottom: 14px;
+}
+
+.about-page h2{
+  margin-top: 30px;
+  margin-bottom: 12px;
+}
+
+.about-page h3{
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.about-page p, .about-page li{
+  line-height: 1.7;
+  font-size: 1.02rem;
+}
+
+.about-page ul{
+  margin: 10px 0 18px 20px;
+}
+
+.about-page blockquote{
+  margin: 18px 0 22px;
+  padding: 14px 18px;
+  border-left: 4px solid rgba(176, 141, 42, 0.8);
+  background: rgba(247, 252, 242, 0.75);
+  border-radius: 12px;
+}
+
+/* On-page TOC spacing */
+.about-page .about-toc{
+  margin-top: 18px;
+}
+
+/* Ensure container has comfortable side padding on small screens */
+@media (max-width: 700px){
+  .page-main{ padding: 28px 0 54px; }
+  .about-page{ padding-left: 4px; padding-right: 4px; }
+  .back-to-top{ right: 14px; bottom: 14px; width: 42px; height: 42px; }
+}
+
+/* About page: ensure Plant Mantra heading aligns with content */
+.about-page #plant-mantra{ text-align:left; }
