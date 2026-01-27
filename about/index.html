@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Terrariums, rare plants, and 3D printed plant accessories in Euless, TX serving the DFW area. Plant Mantra by Mereena.">
-  <title>Plant Mantra by Mereena | DFW Terrariums, Rare Plants & 3D Accessories</title>
+  <title>Plant Mantra by Mereena | DFW Terrariums, Plants & 3D Accessories</title>
   <link rel="stylesheet" href="../assets/css/main.css">
   <script src="../assets/js/cookie-consent.js" defer></script>
   <script src="../assets/js/back-to-top.js" defer></script>
@@ -25,6 +25,74 @@
   /* About page: hide "On this page" section */
   .about-toc { display: none !important; }
 </style>
+<style>
+  /* About hero */
+  .about-hero { margin-top: 28px; margin-bottom: 28px; }
+  .about-hero-img{
+    width: 100%;
+    display: block;
+    height: clamp(320px, 38vw, 520px);
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  }
+  /* Ensure about content aligns with hero container spacing */
+  .about-page.container { margin-top: 0; }
+</style>
+<style>
+/* Tooltip for About Hero */
+.pm-tooltip-wrap{
+  position: relative;
+  cursor: pointer;
+}
+.pm-tooltip-box{
+  border-top: 3px solid #bfa046;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);bottom: 24px;
+  width: min(680px, 92%);
+  background: rgba(248, 250, 240, 0.96);
+  backdrop-filter: blur(6px);
+  border-radius: 14px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.18);
+  padding: 18px 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .22s ease, transform .22s ease, visibility .22s ease;
+  text-align: left;
+}
+.pm-tooltip-header{
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #bfa046; /* warm gold */
+  letter-spacing: .3px;
+}
+.pm-tooltip-body{
+  font-size: 14px;
+  line-height: 1.55;
+  color: #394639;
+}
+.pm-tooltip-body ul{
+  padding-left: 18px;
+  margin-top: 8px;
+}
+.pm-tooltip-wrap:hover .pm-tooltip-box{
+  border-top: 3px solid #bfa046;
+  opacity: 1;
+  visibility: visible; transform: translateX(-50%) translateY(0);
+}
+@media (max-width: 768px){
+  .pm-tooltip-box{
+  border-top: 3px solid #bfa046;
+    position: static;
+    transform: none;
+    margin-top: 14px;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+</style>
 </head>
 <body>
 <div id="top"></div>
@@ -33,7 +101,7 @@
     <a class="brand-link" href="../index.html">
       <img class="brand-logo" src="../assets/img/logo.jpg" alt="Plant Mantra by Mereena logo">
       <span class="brand-name">Plant Mantra by Mereena</span>
-      <span class="brand-tag">DFW Terrariums • Rare Plants • 3D Accessories</span>
+      <span class="brand-tag">DFW Terrariums • Plants • 3D Accessories</span>
     </a>
   </div>
   
@@ -42,7 +110,7 @@
     <a href="../index.html">Home</a>
     <a href="index.html">About</a>
     <a href="../products/terrariums.html">Terrariums</a>
-    <a href="../products/rare-plants.html">Rare Plants</a>
+    <a href="../products/rare-plants.html">Plants</a>
     <a href="../products/3d-printed.html">3D Accessories</a>
     <a href="../blog/index.html">Blog</a>
     <a href="../videos/index.html">Videos</a>
@@ -52,15 +120,48 @@
   </nav>
 </header>
 
-<main class="page-main">>
+
+<style>
+.about-hero {
+  max-width: 1200px;
+  margin: 40px auto 40px auto;
+  padding: 0 24px;
+}
+.about-hero-img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+</style>
+
+<main class="page-main">
+<section class="about-hero container">
+  <div class="pm-tooltip-wrap">
+    <img src="images/about-hero-terrarium.png" alt="Handcrafting a terrarium in warm sunlight" class="about-hero-img pm-tooltip-target">
+    <div class="pm-tooltip-box">
+      <div class="pm-tooltip-header">Plant Mantra | The Living Ecosystem</div>
+      <div class="pm-tooltip-body">
+        <p><strong>The Essence</strong> A miniature world held in glass, capturing the quiet harmony of a forest floor. This self-sustaining sanctuary represents the delicate balance of nature, bringing a grounding, verdant energy to your creative space.</p>
+        <h4>Crafting Rituals</h4>
+        <ul>
+          <li>🌱 <strong>Foundations:</strong> Layering pebbles, charcoal, and organic soil creates the vital drainage and filtration needed for a closed-loop environment.</li>
+          <li>🌿 <strong>Artistry:</strong> Selecting varied textures—from soft mosses to delicate ferns—mimics the natural stratification of a wild landscape.</li>
+          <li>🛠️ <strong>Precision:</strong> Using specialized tools ensures the delicate placement of each element without disturbing the fragile root systems.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="about-content about-page container">
   <h1 id="our-story">Our Story: Where Healthcare Meets Horticulture</h1>
 
   <p class="about-lede">
     Plant Mantra is built on <strong>plant therapy</strong>—using rare plants, miniature ecosystems, and mindful care as a
     simple way to decompress, support stress relief, and bring calm into everyday life.
-    If you’re curious about <strong>rare Alocasia care</strong>, <strong>custom houseplant soil</strong>, or
-    <strong>3D printed planters</strong>, you’re in the right place.
+    If you’re curious about <strong>plants</strong>, <strong>Terrariums</strong> or <strong>3D printed planters</strong>, you’re in the right place.
   </p>
 
   <nav class="about-toc" aria-label="On this page">
@@ -85,7 +186,7 @@
     to "prescribe" myself a moment of silence after a long shift.
   </p>
 
-  <p><em>I found that medicine in the soil.</em></p>
+  <p><em>I found that medicine in plants.</em></p>
 
   <p>
     Plant Mantra was born from a simple realization: plants make us happy, and that happiness is a therapy worth sharing.
@@ -115,7 +216,7 @@
   <h2 id="plant-therapy-partner">Your Partner in Plant Therapy</h2>
 
   <p>
-    I understand that "rare" plants can feel intimidating. But just like a patient-provider relationship,
+    I understand that plants can feel intimidating. But just like a patient-provider relationship,
     I don’t just send you home with a plant; I offer a continuum of care.
   </p>
 
@@ -142,8 +243,8 @@
   </p>
 
   <p>
-    Nature doesn't rush, yet everything gets accomplished. I invite you to explore our collection of <a href="../blog/index.html">3D-printed vessels</a>
-    and rare botanical jewels. Let's find your personal mantra, one leaf at a time.
+    Nature doesn't rush, yet everything gets accomplished. I invite you to explore our collection of <a href="https://www.plantmantrabymereena.com/products/3d-printed.html">3D-printed vessels</a>
+    and botanical jewels. Let's find your personal mantra, one leaf at a time.
   </p>
 </section>
 </main>
