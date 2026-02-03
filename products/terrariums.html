@@ -18,6 +18,106 @@
 
   <script src="../assets/js/hamburger.js" defer></script>
   <script src="../assets/js/tooltip-mouse.js" defer></script>
+
+  <style>
+    /* Page-only styling: Terrariums */
+    .pm-products{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.1rem;
+      margin-top: 1.1rem;
+    }
+    .pm-product{
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 14px 34px rgba(0,0,0,0.05);
+      transition: transform 180ms ease, box-shadow 180ms ease;
+      display: grid;
+      grid-template-rows: auto 1fr;
+    }
+    .pm-product:hover{ transform: translateY(-2px); box-shadow: 0 18px 44px rgba(0,0,0,0.07); }
+    .pm-product-media img{ width:100%; height: 220px; object-fit: cover; display:block; }
+    .pm-product-body{ padding: 1.0rem 1.05rem 1.05rem; }
+    .pm-product h3{ margin: 0 0 0.55rem; color: var(--accent); font-size: 1.2rem; }
+
+    .pm-tags{ display:flex; flex-wrap:wrap; gap: 0.45rem; margin: 0 0 0.75rem; }
+    .pm-tag{
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--accent);
+      background: rgba(4,57,39,0.06);
+      border: 1px solid rgba(4,57,39,0.12);
+      padding: 0.25rem 0.55rem;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+
+    .pm-actions{ display:flex; align-items:center; gap: 0.75rem; flex-wrap: wrap; margin-top: 0.85rem; }
+
+    .pm-split{
+      display:grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 1.1rem;
+      align-items: stretch;
+    }
+    .pm-split-card{
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 1.15rem;
+      box-shadow: 0 14px 34px rgba(0,0,0,0.05);
+    }
+    .pm-split-card--image{ padding: 0; overflow:hidden; }
+    .pm-split-card--image img{ width:100%; height:100%; object-fit: cover; display:block; }
+
+    .pm-bullets{ margin: 0.85rem 0 1.0rem; padding-left: 1.1rem; }
+    .pm-bullets li{ margin: 0.4rem 0; color: var(--muted); }
+
+    .pm-care-grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.0rem;
+      margin-top: 1.0rem;
+    }
+    .pm-care{
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 1.0rem 1.05rem;
+      box-shadow: 0 14px 34px rgba(0,0,0,0.05);
+    }
+    .pm-care h3{ margin: 0 0 0.35rem; color: var(--accent); }
+
+    .pm-faq{ margin-top: 1.0rem; }
+    .pm-faq details{
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 0.85rem 1.0rem;
+      box-shadow: 0 10px 26px rgba(0,0,0,0.04);
+      margin-bottom: 0.75rem;
+    }
+    .pm-faq summary{ cursor:pointer; font-weight: 800; color: var(--accent); }
+    .pm-faq details p{ margin: 0.6rem 0 0; }
+
+    .pm-kit{
+      background: linear-gradient(180deg, rgba(4,57,39,0.06), rgba(226,114,91,0.04));
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 1.25rem;
+      box-shadow: 0 14px 34px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+
+    @media (max-width: 980px){
+      .pm-products{ grid-template-columns: 1fr; }
+      .pm-split{ grid-template-columns: 1fr; }
+      .pm-care-grid{ grid-template-columns: 1fr; }
+      .pm-product-media img{ height: 240px; }
+    }
+  </style>
 </head>
 <body>
 
@@ -46,7 +146,204 @@
 </header>
 
 <main>
-<h1>Terrariums</h1><p>Custom-built terrariums. Kits coming soon.</p>
+  <!-- PAGE: Terrariums -->
+
+  <section class="hero-premium">
+    <div class="hero-premium-inner">
+      <div class="hero-media-card">
+        <span class="pm-tip" tabindex="0">
+          <img src="../assets/img/terrarium-display-1400x1000.png" alt="Plant Mantra handcrafted closed terrarium on display">
+          <span class="pm-tip-card pm-tip-card--light" role="tooltip">
+            <div class="pm-tip-title"><span class="serif">Plant Mantra</span> <span class="sub">Handcrafted Closed Terrarium</span></div>
+            <ul class="pm-tip-list">
+              <li>🌿 <strong>Asparagus Fern</strong> | Airy, feather-like centerpiece.</li>
+              <li>🍃 <strong>Hoya</strong> | Waxy foliage for lasting greenery.</li>
+              <li>✨ <strong>Fittonia Red</strong> | A vibrant pop of “nerve-plant” color.</li>
+              <li>☁️ <strong>Cushion Moss</strong> | Soft, lush forest floor.</li>
+              <li>🌱 <strong>Tropical Mix</strong> | Humidity-loving greens for balance.</li>
+            </ul>
+            <div class="pm-tip-footer">Closed glass • low maintenance • DFW pickup</div>
+          </span>
+        </span>
+      </div>
+
+      <div class="hero-copy-card">
+        <h1>Handcrafted Terrariums.<br><span class="hero-tech">Living ecosystems in glass.</span></h1>
+        <p>Custom-built terrariums designed for calm, beauty, and long-lasting growth — with guidance on light, placement, and care.</p>
+        <div class="cta-row">
+          <a class="btn" href="../contact.html">Request a custom build</a>
+          <a class="btn btn-ghost" href="../gallery/index.html">See terrariums in the wild</a>
+        </div>
+        <div class="hero-badges">
+          <span class="badge">Euless • DFW</span>
+          <span class="badge badge-2">Closed terrariums</span>
+          <span class="badge badge-2">Open terrariums</span>
+          <span class="badge badge-2">Kits coming soon</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pillars" aria-label="Terrarium categories">
+    <div class="pillars-grid">
+
+      <article class="pillar-card">
+        <div class="pillar-media">
+          <img src="../assets/img/home/succulent-terrarium.png" alt="Closed terrarium with lush greenery">
+        </div>
+        <h2>Closed Terrariums</h2>
+        <p>A self-sustaining microclimate with humidity-loving plants — designed to thrive with minimal upkeep.</p>
+        <a class="text-link" href="#available">View availability →</a>
+      </article>
+
+      <article class="pillar-card">
+        <div class="pillar-media">
+          <img src="../assets/img/home/terrarium.png" alt="Open terrarium in a glass vessel">
+        </div>
+        <h2>Open Terrariums</h2>
+        <p>Airflow-friendly builds for succulents and brighter spaces — a clean, modern tabletop statement.</p>
+        <a class="text-link" href="#custom">Build one with us →</a>
+      </article>
+
+      <article class="pillar-card">
+        <div class="pillar-media">
+          <img src="../assets/img/home/plant-accessory.png" alt="Tools and accessories for building terrariums">
+        </div>
+        <h2>Terrarium Kits</h2>
+        <p>Coming soon — curated kits with layers, plants, and step-by-step guidance so you can build your own.</p>
+        <a class="text-link" href="#kits">Get notified →</a>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="section" id="available">
+    <div class="section-head">
+      <h2>Available Drops</h2>
+      <a class="text-link" href="../contact.html">Ask what’s ready this week →</a>
+    </div>
+    <p class="muted">Availability changes quickly. If you see a style you love, reach out and we’ll confirm what’s ready — or build something similar.</p>
+
+    <div class="pm-products">
+      <article class="pm-product">
+        <div class="pm-product-media">
+          <img src="../assets/img/terrarium-display-1400x1000.png" alt="Signature closed terrarium display">
+        </div>
+        <div class="pm-product-body">
+          <h3>Signature Closed Terrarium</h3>
+          <div class="pm-tags">
+            <span class="pm-tag">Low maintenance</span>
+            <span class="pm-tag">Bright indirect light</span>
+            <span class="pm-tag">Medium</span>
+          </div>
+          <p class="muted">A balanced, humidity-loving mix with layered substrate and a polished finish.</p>
+          <div class="pm-actions">
+            <a class="btn btn-small" href="../contact.html">Reserve / inquire</a>
+            <a class="text-link" href="#care">Care guide →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pm-product">
+        <div class="pm-product-media">
+          <img src="../assets/img/home/succulent-terrarium.png" alt="Open terrarium suited for succulents">
+        </div>
+        <div class="pm-product-body">
+          <h3>Modern Open Terrarium</h3>
+          <div class="pm-tags">
+            <span class="pm-tag">Bright light</span>
+            <span class="pm-tag">Low water</span>
+            <span class="pm-tag">Small–Medium</span>
+          </div>
+          <p class="muted">Crisp, airy design with a clean top layer and curated drought-tolerant plants.</p>
+          <div class="pm-actions">
+            <a class="btn btn-small" href="../contact.html">Inquire</a>
+            <a class="text-link" href="#custom">Customize →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pm-product">
+        <div class="pm-product-media">
+          <img src="../assets/img/home/houseplant.png" alt="Terrarium-friendly plant mix">
+        </div>
+        <div class="pm-product-body">
+          <h3>Gift-Ready Mini Terrarium</h3>
+          <div class="pm-tags">
+            <span class="pm-tag">Desk-friendly</span>
+            <span class="pm-tag">Easy care</span>
+            <span class="pm-tag">Perfect gift</span>
+          </div>
+          <p class="muted">A compact build made for gifting — includes a simple care card and placement tips.</p>
+          <div class="pm-actions">
+            <a class="btn btn-small" href="../contact.html">Reserve</a>
+            <a class="text-link" href="../gallery/index.html">See examples →</a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <p class="note">Want something specific? Send a photo or describe your space and we’ll recommend size, plant mix, and placement.</p>
+  </section>
+
+  <section class="section" id="custom">
+    <div class="pm-split">
+      <div class="pm-split-card">
+        <h2>Custom Builds</h2>
+        <p class="muted">Tell us your vibe (minimal, lush, jungle, clean lines), your lighting, and where it will live — we’ll handle the rest.</p>
+        <ul class="pm-bullets">
+          <li><strong>Choose a vessel</strong> (or we can source one).</li>
+          <li><strong>Pick the ecosystem</strong>: closed (humidity) or open (airflow).</li>
+          <li><strong>Care matched</strong> to your space and schedule.</li>
+        </ul>
+        <a class="btn" href="../contact.html">Start a custom request</a>
+      </div>
+      <div class="pm-split-card pm-split-card--image">
+        <img src="../assets/img/home/plant-studio.png" alt="Plant Mantra studio workspace for building terrariums">
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="care">
+    <h2>Care & Placement</h2>
+    <div class="pm-care-grid">
+      <div class="pm-care">
+        <h3>Light</h3>
+        <p class="muted">Bright, indirect light is ideal for most closed terrariums. Avoid harsh direct sun (it can overheat the glass).</p>
+      </div>
+      <div class="pm-care">
+        <h3>Water</h3>
+        <p class="muted">Closed terrariums rarely need watering. If you see dry substrate for several days, reach out and we’ll guide you.</p>
+      </div>
+      <div class="pm-care">
+        <h3>Condensation</h3>
+        <p class="muted">Light fogging is normal. Heavy drip means too much moisture — crack the lid briefly or message us for a reset plan.</p>
+      </div>
+    </div>
+
+    <div class="pm-faq" role="region" aria-label="Terrarium FAQ">
+      <details>
+        <summary>How long do closed terrariums last?</summary>
+        <p class="muted">With proper light and occasional adjustments, closed terrariums can thrive for years. We’ll help you tune it if conditions change.</p>
+      </details>
+      <details>
+        <summary>Do you deliver in DFW?</summary>
+        <p class="muted">Pickup is easiest, but delivery may be available depending on size and distance. Message us and we’ll confirm options.</p>
+      </details>
+      <details>
+        <summary>Can you match a photo or theme?</summary>
+        <p class="muted">Yes — share a reference photo or aesthetic (lush jungle, minimalist, mossy forest, etc.) and we’ll design within your lighting and care preferences.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="section" id="kits">
+    <div class="pm-kit">
+      <h2>Kits Coming Soon</h2>
+      <p class="muted">Terrarium kits will include a curated plant mix, layering materials, and a simple build guide. Want first access?</p>
+      <a class="btn" href="#footer-newsletter">Join the newsletter</a>
+    </div>
+  </section>
 </main>
 
 <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
@@ -56,7 +353,7 @@
 
 
 
-<div class="footer-newsletter">
+<div class="footer-newsletter" id="footer-newsletter">
   <div class="footer-newsletter-inner">
     <div>
       <h3>Join the Mantra…</h3>
